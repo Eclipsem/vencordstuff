@@ -1,0 +1,64 @@
+.banner-1YaD3N  {
+ background-image: linear-gradient(transparent, var(--profile-gradient-secondary-color))!important;
+}
+div.container-2giAcK:has(div.progressBarContainer-1efroK) {
+  display: none; 
+}
+.newChannel-3q3LPr, /* the "NEW" text thats next to channels */
+div[aria-label*="Show User Profile"], /* user profile button */
+button[aria-label="Send a gift"] /* send gift button */
+{ 
+  display: none;
+}
+/* oneko, looks kinda odd with 47px */
+[class^="panels-3wFtMD"]::before {
+    content: "";
+    width: 47px;
+    height: 47px;
+    left: 185px;
+    margin-top: -47px;
+    position: absolute;
+    background-image: url('https://cdn.discordapp.com/emojis/1091853954045972530.gif?size=48&name=oneko_zzz&quality=lossless');
+}
+
+:root {
+  --channel-bg: rgba(22, 24, 29, 0.145);
+  --channel-border: rgb(87, 97, 117);
+  --channel-curve: 0.75rem;
+  --channel-border-thickness: 2px;
+}
+
+:not([class*=container-]) > ul > [class*=containerDefault-][class*=selected-] > div > div > [class*=link],
+[class*=container-] > ul > [class*=containerDefault-][class*=selected-] > [class*=wrapper-] > [class*=link-],
+[class*=iconVisibility-][class*=wrapper-][class*=modeSelected-] > div > [class*=link-]
+{
+  background: var(--channel-bg);
+  border: var(--channel-border-thickness) solid var(--channel-border);
+  border-radius: var(--channel-curve);
+}
+
+[class*=containerDefault] > div > div > a > div > div > svg { width: 15px; height: 15px; }
+
+:not([class*=container-]) > ul > [class*=containerDefault-] > div > div > [class*=link],
+[class*=container-] > ul > [class*=containerDefault-] > [class*=wrapper-] > [class*=link-],
+[class*=modeConnected-] > div > [class*=link-],
+[class*=iconVisibility-][class*=wrapper-] > div > [class*=link-],
+[class*=containerDefault-] > [class*=list-] > div > div > div
+{
+    border: var(--channel-border-thickness) solid transparent;
+    background-color: transparent;
+    border-radius: var(--channel-curve);
+}
+
+:not([class*=container-]) > ul > [class*=containerDefault-]:hover > div > div > [class*=link],
+[class*=container-] > ul > [class*=containerDefault-]:hover > [class*=wrapper-] > [class*=link-],
+[class*=iconVisibility-][class*=wrapper-]:hover > div > [class*=link-],
+[class*=containerDefault-] > [class*=list-] > div:hover > div > div
+{
+    border-color: var(--channel-border) !important;
+}
+
+[class*=unread-] { display: none; }
+
+[class*=modeUnread] [class*=icon-],
+[class*=containerDefault-][class*=selected-] [class*=icon-], [class*=modeSelected-] [class*=icon-],
